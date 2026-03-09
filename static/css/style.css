@@ -1,0 +1,94 @@
+/* Global */
+
+body{
+    margin:0;
+    height:100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color:rgb(0, 0, 0);
+    overflow:hidden;
+}
+
+/* Background */
+
+#bgvideo{
+    position:fixed;
+    right:0;
+    bottom:0;
+    min-width:100%;
+    min-height:100%;
+    z-index:-1;
+    filter:brightness(35%);
+}
+
+/* Hero */
+
+.hero-title{
+    font-size:64px;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.hero-sub{
+    opacity:0.8;
+    font-size:18px;
+}
+
+/* Glass card */
+
+.glass-card{
+    backdrop-filter: blur(18px);
+    background: rgba(255,255,255,0.06);
+    border-radius:18px;
+    padding:30px;
+    border:1px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover{
+    transform:translateY(-5px);
+}
+
+/* Button */
+
+.analyze-btn{
+    background:#ffb400;
+    border:none;
+    font-weight:bold;
+    letter-spacing:1px;
+    transition: all 0.3s ease;
+}
+
+.analyze-btn:hover{
+    background:#ffd54f;
+    transform:scale(1.03);
+}
+
+/* Result */
+
+.result-panel{
+    margin-top:25px;
+    text-align:center;
+}
+
+.real{
+    color:#4cff9f;
+}
+
+.fake{
+    color:#ff5a5a;
+}
+
+/* Keywords */
+
+.keyword{
+    display:inline-block;
+    margin:4px;
+    padding:6px 14px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+    transition:all 0.2s;
+}
+
+.keyword:hover{
+    background:rgba(255,255,255,0.25);
+}
