@@ -1,0 +1,175 @@
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#232B2B;
+color:#F0F8FF;
+overflow-x:hidden;
+}
+
+/* Animated background canvas */
+
+#bg-canvas{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* Header */
+
+header{
+text-align:center;
+padding:40px 20px;
+}
+
+.title{
+font-size:42px;
+color:#B2FFFF;
+}
+
+.subtitle{
+color:#F0F8FF;
+opacity:0.8;
+}
+
+/* Layout */
+
+.container{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:30px;
+flex-wrap:wrap;
+}
+
+.analyzer{
+width:600px;
+background:#008B8B;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.info-panel{
+width:260px;
+background:#008B8B;
+padding:25px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Inputs */
+
+input, textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:none;
+border-radius:6px;
+font-size:15px;
+}
+
+textarea{
+height:120px;
+}
+
+/* Button */
+
+button{
+width:100%;
+padding:14px;
+font-size:16px;
+background:#3AB09E;
+border:none;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+color:#232B2B;
+font-weight:bold;
+}
+
+button:hover{
+background:#B2FFFF;
+}
+
+/* Result box */
+
+.result-box{
+margin-top:25px;
+padding:20px;
+border-radius:10px;
+background:#232B2B;
+border:2px solid #3AB09E;
+}
+
+.prediction{
+font-size:28px;
+font-weight:bold;
+}
+
+.real{
+color:#B2FFFF;
+}
+
+.fake{
+color:#ff6b6b;
+}
+
+/* Confidence bar */
+
+.confidence-bar{
+height:12px;
+background:#232B2B;
+border-radius:6px;
+margin-top:8px;
+overflow:hidden;
+border:1px solid #3AB09E;
+}
+
+.confidence-fill{
+height:100%;
+background:#3AB09E;
+transition:width 1s ease;
+}
+
+/* Keywords */
+
+.keywords{
+margin-top:10px;
+}
+
+.keyword{
+display:inline-block;
+background:#232B2B;
+padding:6px 10px;
+margin:4px;
+border-radius:5px;
+font-size:13px;
+border:1px solid #3AB09E;
+}
+
+/* Loading text */
+
+.loading{
+display:none;
+margin-top:10px;
+color:#B2FFFF;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{opacity:0.4;}
+50%{opacity:1;}
+100%{opacity:0.4;}
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:20px;
+color:#B2FFFF;
+margin-top:40px;
+}

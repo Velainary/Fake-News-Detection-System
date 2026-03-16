@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Fake News Detector</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+<h1 class="title">Fake News Detection System</h1>
+<p class="subtitle">Machine Learning Powered News Verification</p>
+</header>
+
+<div class="container">
+
+<div class="analyzer">
+
+<form method="POST" id="newsForm">
+
+<input type="text" name="news_url" placeholder="Paste news article URL">
+
+<textarea name="news_text" placeholder="Or paste news text here"></textarea>
+
+<button type="submit" id="analyzeBtn">Analyze Article</button>
+
+</form>
+
+<div id="loading" class="loading">
+AI is analyzing the article...
+</div>
+
+{% if prediction %}
+
+<div class="result-box">
+
+<h2>Prediction Result</h2>
+
+<p class="prediction {% if prediction == 'REAL NEWS' %}real{% else %}fake{% endif %}">
+{{ prediction }}
+</p>
+
+<p class="confidence-text">Confidence: {{ confidence }}%</p>
+
+<div class="confidence-bar">
+<div class="confidence-fill" style="width: {{ confidence }}%"></div>
+</div>
+
+{% if keywords %}
+
+<h3>Key Influencing Words</h3>
+
+<div class="keywords">
+
+{% for word in keywords %}
+<span class="keyword">{{ word }}</span>
+{% endfor %}
+
+</div>
+
+{% endif %}
+
+</div>
+
+{% endif %}
+
+</div>
+
+<div class="info-panel">
+
+<h2>How to Spot Fake News</h2>
+
+<ul>
+<li>Sensational headlines</li>
+<li>Unknown sources</li>
+<li>Lack of evidence</li>
+<li>Emotional manipulation</li>
+<li>Suspicious URLs</li>
+</ul>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>Fake News Detection System • Machine Learning Project</p>
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
