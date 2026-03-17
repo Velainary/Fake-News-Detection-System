@@ -27,6 +27,23 @@ padding:40px 20px;
 .title{
 font-size:42px;
 color:#B2FFFF;
+text-align:center;
+position:relative;
+animation:floatTitle 4s ease-in-out infinite, glowTitle 2.5s ease-in-out infinite alternate;
+}
+
+/* Floating effect */
+@keyframes floatTitle{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-8px);}
+100%{transform:translateY(0px);}
+}
+
+/* Glow pulse effect */
+@keyframes glowTitle{
+0%{text-shadow:0 0 5px #3AB09E;}
+50%{text-shadow:0 0 20px #B2FFFF;}
+100%{text-shadow:0 0 5px #3AB09E;}
 }
 
 .subtitle{
@@ -42,6 +59,7 @@ justify-content:center;
 gap:40px;
 padding:30px;
 flex-wrap:wrap;
+align-items:flex-start;
 }
 
 .analyzer{
@@ -58,6 +76,9 @@ background:#008B8B;
 padding:25px;
 border-radius:10px;
 box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
+position:sticky;
+top:40px;
 }
 
 /* Inputs */
