@@ -194,3 +194,48 @@ padding:20px;
 color:#B2FFFF;
 margin-top:40px;
 }
+
+/* ---------- LOADER ---------- */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#232B2B;
+display:flex;
+align-items:center;
+justify-content:flex-start;
+z-index:9999;
+overflow:hidden;
+}
+
+/* Vertical bar on left */
+
+.loader-bar{
+width:6px;
+height:100%;
+background:#1a1f1f;
+position:absolute;
+left:0;
+top:0;
+}
+
+.loader-progress{
+width:100%;
+height:0%;
+background:#3AB09E;
+transition:height 0.2s ease;
+}
+
+/* Percentage text */
+
+.loader-text{
+position:absolute;
+left:20px;
+bottom:20px;
+font-size:22px;
+color:#B2FFFF;
+letter-spacing:2px;
+}

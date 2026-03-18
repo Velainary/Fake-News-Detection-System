@@ -11,6 +11,18 @@
 
 <body>
 
+<div id="loader">
+
+    <div class="loader-bar">
+        <div class="loader-progress" id="loaderProgress"></div>
+    </div>
+
+    <div class="loader-text" id="loaderText">0%</div>
+
+</div>
+
+<div id="mainContent" style="opacity:0;">
+
     <canvas id="bg-canvas"></canvas>
     
 <div class="background"></div>
@@ -97,6 +109,8 @@ AI is analyzing the article...
 </footer>
 
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</div>
 
 </body>
 
